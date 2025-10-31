@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,14 +25,14 @@ public class HelicopterController : MonoBehaviour
 		InputCtrl();
 	}
 
-	private void FixedUpdate() // forces acting on the helicopter. Given it is rigidbody I'm using ForceMode. Impulse since it is weight dependent.
+	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.
 	{
 		_rigidbody.AddForce(transform.up * throttle, ForceMode.Impulse);
 		_rigidbody.AddTorque(transform.right * pitch * pitchRate, ForceMode.Acceleration);
 		_rigidbody.AddTorque(transform.forward * roll * rollRate, ForceMode.Acceleration);
 		_rigidbody.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);
 	}
-	// conversely, acceleration isn't. I don't fully understand these, though I think they are working fine, I just have no limits placed on the airframe yet.
+	// i don't fully understand these yet, though I think they are working fine as coded, I just have no limits placed on the airframe yet
 	private void InputCtrl() // relative control axes from input manager
     {
 		roll = Input.GetAxis("Roll");

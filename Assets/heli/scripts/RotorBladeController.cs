@@ -5,17 +5,16 @@ using UnityEngine.Animations;
 
 public class RotorBladeController : MonoBehaviour
 {
-    public enum Axis // enumeration declares each blade axis
+    // declarations of independence
+	public Axis rotationAxis;
+    public float bladeSpeed;
+	public bool inverseRotation = false;
+	public Vector3 rotation;
+    float rotateDegrees;
+	public enum Axis // enumeration declares each blade axis
     {
         z // fire emoji
     }
-
-    // declarations of independence
-    public Axis rotationAxis;
-    public float bladeSpeed = 3000;
-    public bool inverseRotation = false;
-    private Vector3 rotation;
-    float rotateDegrees;
 
     void Start()
     {
