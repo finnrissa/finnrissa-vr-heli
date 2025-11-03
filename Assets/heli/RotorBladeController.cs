@@ -15,9 +15,9 @@ public class RotorBladeController : MonoBehaviour
     // declarations of independence
     public Axis rotationAxis;
     public float bladeSpeed = 3000;
-    public bool inverseRotation = false;
+    public bool inverseRotation = false; // bladespeed is a float you don't need this you can just set speed negative
     private Vector3 rotation;
-    float rotateDegrees;
+    float rotateDegrees; 
 
     void Start()
     {
@@ -26,11 +26,11 @@ public class RotorBladeController : MonoBehaviour
 
     void Update()
     {
-        if (inverseRotation)
+        if (inverseRotation) // if statement of all time
             rotateDegrees -= bladeSpeed * Time.deltaTime;
         else
             rotateDegrees += bladeSpeed * Time.deltaTime;
-        rotateDegrees = rotateDegrees % 360;
+        rotateDegrees = rotateDegrees % 360; 
 		switch (rotationAxis)
 		{
 			case Axis.z:
@@ -38,7 +38,13 @@ public class RotorBladeController : MonoBehaviour
 				break;
 			default:
 				transform.localRotation = Quaternion.Euler(rotateDegrees, rotation.y, rotation.z); // essentially keeps the axis cases in check in the event they do not run
-                break;
+                break; //genuinely in what universe do we need a default statement, let alone this switch statement
 		}
+
+        /* whole ass switch statement can be replaced by
+        * transform.localRotation = Quaternion.Euler(rotation.x, rotation.y, rotateDegrees);
+        * there is never a scenerio where we rotate by something else lmfao
+        * 
+        */
 	}
 }
