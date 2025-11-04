@@ -45,6 +45,8 @@ public class RotorBladeController : MonoBehaviour
         * transform.localRotation = Quaternion.Euler(rotation.x, rotation.y, rotateDegrees);
         * there is never a scenerio where we rotate by something else lmfao
         * 
+        * nevermind why is this legacy script just chilling in heli assets??????????
+        * ignore what i said????
         */
 	}
 }
