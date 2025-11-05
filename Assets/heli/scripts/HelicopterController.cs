@@ -2,16 +2,19 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 //hi
 public class HelicopterController : MonoBehaviour
 {
-    private Rigidbody _rigidbody;
+	private Rigidbody _rigidbody;
 	[SerializeField] private float throttleSensitivity;
 	[SerializeField] private float yawRate;
 	[SerializeField] private float rollRate;
 	[SerializeField] private float pitchRate;
-	
-    private float throttle;
+
+	public InputActionProperty thumbstickAction;
+
+	private float throttle;
     private float roll;
     private float pitch;
     private float yaw;
@@ -23,6 +26,8 @@ public class HelicopterController : MonoBehaviour
 	private void Update()
 	{
 		InputCtrl();
+		Vector2 input = thumbstickAction.action.ReadValue<Vector2>();
+		Debug.Log(thumbstickAction);
 	}
 
 	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.

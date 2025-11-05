@@ -1,0 +1,34 @@
+{
+    "name": "helicopter input",
+    "maps": [
+        {
+            "name": "player",
+            "id": "f8d0265a-8944-4b0a-acbd-8ff5f8a28fac",
+            "actions": [
+                {
+                    "name": "Roll",
+                    "type": "Value",
+                    "id": "a23ed4f0-045a-45e9-b476-db721e3d43ca",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f24407ba-4e13-4dba-946f-c337f539b3ea",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
