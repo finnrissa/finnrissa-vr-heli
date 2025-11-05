@@ -27,7 +27,7 @@ public class HelicopterController : MonoBehaviour
 	{
 		InputCtrl();
 		Vector2 input = thumbstickAction.action.ReadValue<Vector2>();
-		Debug.Log(thumbstickAction);
+		Debug.Log(thumbstickAction.action);
 	}
 
 	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.

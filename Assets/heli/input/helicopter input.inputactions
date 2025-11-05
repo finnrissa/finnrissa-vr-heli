@@ -6,26 +6,48 @@
             "id": "f8d0265a-8944-4b0a-acbd-8ff5f8a28fac",
             "actions": [
                 {
-                    "name": "Roll",
-                    "type": "Value",
-                    "id": "a23ed4f0-045a-45e9-b476-db721e3d43ca",
-                    "expectedControlType": "Vector2",
+                    "name": "roll",
+                    "type": "Button",
+                    "id": "b685ac0a-0cca-448f-9fbf-f68fd928d7d2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "f24407ba-4e13-4dba-946f-c337f539b3ea",
-                    "path": "<OculusTouchController>{LeftHand}/thumbstick",
+                    "name": "1D Axis",
+                    "id": "d398a7c6-23ca-4bac-9042-ea26a73f1855",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Roll",
-                    "isComposite": false,
+                    "action": "roll",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "d5cd4fb6-a62a-4979-9d79-d3c10cc8a385",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "9123d1f8-792f-4392-857a-7dcbee6e4f5b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
