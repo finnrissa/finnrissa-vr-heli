@@ -2,52 +2,30 @@
     "name": "helicopter input",
     "maps": [
         {
-            "name": "player",
+            "name": "rightcontroller",
             "id": "f8d0265a-8944-4b0a-acbd-8ff5f8a28fac",
             "actions": [
                 {
                     "name": "roll",
-                    "type": "Button",
-                    "id": "b685ac0a-0cca-448f-9fbf-f68fd928d7d2",
-                    "expectedControlType": "",
+                    "type": "Value",
+                    "id": "7daada25-1e51-4197-bc2a-7a1601dcd05c",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "1D Axis",
-                    "id": "d398a7c6-23ca-4bac-9042-ea26a73f1855",
-                    "path": "1DAxis",
+                    "name": "",
+                    "id": "cab117ae-7192-4d05-8b5d-f79415e1f8ae",
+                    "path": "<XRController>{RightHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "roll",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "d5cd4fb6-a62a-4979-9d79-d3c10cc8a385",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "roll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "9123d1f8-792f-4392-857a-7dcbee6e4f5b",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "roll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

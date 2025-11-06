@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ebe61c675dcc3714a9192eab816b1b2f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254620
+  packageName: The Visual Engine | Terrain Blanket Module
+  packageVersion: 20.1.0
+  assetPath: Assets/BOXOPHOBIC/The Visual Engine Modules/Terrain Blanket/Core/Editor/Boxophobic.TerrainBlanket.Editor.asmdef
+  uploadId: 687655

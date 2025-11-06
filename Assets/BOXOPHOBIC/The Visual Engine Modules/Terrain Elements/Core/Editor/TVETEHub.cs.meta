@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 79e2402a890fd954488baf82ac24ad39
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 181731
+  packageName: The Visual Engine | Terrain Elements Module
+  packageVersion: 20.1.0
+  assetPath: Assets/BOXOPHOBIC/The Visual Engine Modules/Terrain Elements/Core/Editor/TVETEHub.cs
+  uploadId: 687656

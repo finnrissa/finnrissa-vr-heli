@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e1666ffa82d30ec43997801efcac8889
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 263730
+  packageName: The Visual Engine | Terrain Shaders Module
+  packageVersion: 20.1.0
+  assetPath: Assets/BOXOPHOBIC/The Visual Engine Modules/Terrain Shaders/Core/Editor/TVETSHub.cs
+  uploadId: 687657

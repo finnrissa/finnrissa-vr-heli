@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using BNG;
 //hi
 public class HelicopterController : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class HelicopterController : MonoBehaviour
 	[SerializeField] private float yawRate;
 	[SerializeField] private float rollRate;
 	[SerializeField] private float pitchRate;
-
-	public InputActionProperty thumbstickAction;
 
 	private float throttle;
     private float roll;
@@ -25,9 +24,13 @@ public class HelicopterController : MonoBehaviour
 	}
 	private void Update()
 	{
+		
+		if (InputBridge.Instance.RightTrigger > 0)
+		{
+			Debug.Log("Right Trigger is being held down!");
+		}
 		InputCtrl();
-		Vector2 input = thumbstickAction.action.ReadValue<Vector2>();
-		Debug.Log(thumbstickAction.action);
+		
 	}
 
 	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.
@@ -53,10 +56,10 @@ public class HelicopterController : MonoBehaviour
         {
 			throttle -= throttleSensitivity;
         }
-		Debug.Log(roll);
-		Debug.Log(pitch);
-		Debug.Log(yaw);
-		Debug.Log(throttle);
+		//Debug.Log(roll);
+		//Debug.Log(pitch);
+		//Debug.Log(yaw);
+		//Debug.Log(throttle);
 
 		throttle = Mathf.Clamp(throttle, 0f, 100f);
 	}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d73133282f0ec9345aed5b2c933abcd6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254620
+  packageName: The Visual Engine | Terrain Blanket Module
+  packageVersion: 20.1.0
+  assetPath: Assets/BOXOPHOBIC/The Visual Engine Modules/Terrain Blanket/Core/Editor/TVETBHub.cs
+  uploadId: 687655

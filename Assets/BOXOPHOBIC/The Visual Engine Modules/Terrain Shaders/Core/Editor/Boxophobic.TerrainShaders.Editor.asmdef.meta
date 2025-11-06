@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8fe5b4cdb4081cc46bd91fce04ea7440
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 263730
+  packageName: The Visual Engine | Terrain Shaders Module
+  packageVersion: 20.1.0
+  assetPath: Assets/BOXOPHOBIC/The Visual Engine Modules/Terrain Shaders/Core/Editor/Boxophobic.TerrainShaders.Editor.asmdef
+  uploadId: 687657
