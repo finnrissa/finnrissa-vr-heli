@@ -55,7 +55,6 @@ Material:
   - TVE_TINTING_VERT
   - TVE_WETNESS
   - TVE_WETNESS_ELEMENT
-  - _SPECULARHIGHLIGHTS_OFF
   m_InvalidKeywords:
   - TVE_FEATURE_CLIP
   m_LightmapFlags: 0

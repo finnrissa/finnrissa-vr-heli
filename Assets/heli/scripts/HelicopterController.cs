@@ -60,7 +60,7 @@ public class HelicopterController : MonoBehaviour
 		helicopter.AddTorque(transform.right * pitch * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);
-		helicopter.AddForce(transform.up * throttle2*10, ForceMode.Impulse);
+		helicopter.AddForce(transform.up * throttle2 * 10, ForceMode.Impulse);
 		helicopter.AddTorque(transform.right * pitch2 * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll2 * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw2l * yawRate, ForceMode.Acceleration);
@@ -77,7 +77,7 @@ public class HelicopterController : MonoBehaviour
 		pitch2 = InputBridge.Instance.RightThumbstickAxis.y;
 		yaw2r = InputBridge.Instance.RightTrigger;
 		yaw2l = -InputBridge.Instance.RightGrip;
-		throttle2 = InputBridge.Instance.LeftTrigger;
+		throttle2 = InputBridge.Instance.LeftThumbstickAxis.y;
 
 		if (InputBridge.Instance.BButtonDown)
 		{
@@ -102,18 +102,5 @@ public class HelicopterController : MonoBehaviour
 		Debug.Log(throttle);
 
 		throttle = Mathf.Clamp(throttle, 0f, 100f);
-
-		if (InputBridge.Instance.LeftTriggerDown)
-		{
-			throttle += throttleSensitivity;
-		}
-		else if (InputBridge.Instance.LeftGripDown)
-		{
-			throttle -= throttleSensitivity;
-		}
-
-		throttle2 = Mathf.Clamp(throttle2, 0f, 100f);
-		Debug.Log(throttle2);
-		Debug.Log(throttleSensitivity);
 	}
 }
