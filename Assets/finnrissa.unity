@@ -3040,6 +3040,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 205228266696081936, guid: 048494ddbb5f1c34dbe032094c193fcd, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.7054003
+      objectReference: {fileID: 0}
+    - target: {fileID: 205228266696081936, guid: 048494ddbb5f1c34dbe032094c193fcd, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.19936281
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4234,9 +4242,10 @@ MonoBehaviour:
   helicopter: {fileID: 0}
   throttleSensitivity: 1
   yawRate: 2
-  rollRate: 1
-  pitchRate: 1
-  stickThrottleRate: 100
+  rollRate: 2
+  pitchRate: 2.2
+  stickThrottleRate: 50
+  throttleConstant: 47
   maxSpeed: 0
 --- !u!54 &919132147999477296
 Rigidbody:
@@ -4247,8 +4256,8 @@ Rigidbody:
   m_GameObject: {fileID: 919132147999477294}
   serializedVersion: 4
   m_Mass: 350
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.25
+  m_AngularDrag: 0.25
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4258,7 +4267,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0

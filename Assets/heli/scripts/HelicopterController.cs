@@ -13,6 +13,7 @@ public class HelicopterController : MonoBehaviour
 	[SerializeField] private float rollRate;
 	[SerializeField] private float pitchRate;
 	[SerializeField] private float stickThrottleRate;
+	public float throttleConstant;
 	[SerializeField] float maxSpeed;
 
 	private float throttle;
@@ -61,7 +62,7 @@ public class HelicopterController : MonoBehaviour
 		helicopter.AddTorque(transform.right * pitch * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);
-		helicopter.AddForce(transform.up * throttle2 * stickThrottleRate, ForceMode.Impulse);
+		helicopter.AddForce(transform.up * (throttle2 * Mathf.Abs(throttle2)) * stickThrottleRate + (transform	.up* throttleConstant), ForceMode.Impulse);
 		helicopter.AddTorque(transform.right * pitch2 * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll2 * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw2l * yawRate, ForceMode.Acceleration);
@@ -112,6 +113,6 @@ public class HelicopterController : MonoBehaviour
 		Debug.Log(throttle2);
 
 		throttle = Mathf.Clamp(throttle, 0f, 100f);
-		throttle2 = Mathf.Clamp(throttle2, 0f, 100f);
+		throttle2 = Mathf.Clamp(throttle2, -100f, 100f);
 	}
 }
