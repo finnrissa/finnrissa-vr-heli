@@ -12,6 +12,7 @@ public class HelicopterController : MonoBehaviour
 	[SerializeField] private float yawRate;
 	[SerializeField] private float rollRate;
 	[SerializeField] private float pitchRate;
+	[SerializeField] private float stickThrottleRate;
 	[SerializeField] float maxSpeed;
 
 	private float throttle;
@@ -60,7 +61,7 @@ public class HelicopterController : MonoBehaviour
 		helicopter.AddTorque(transform.right * pitch * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);
-		helicopter.AddForce(transform.up * throttle2 * 10, ForceMode.Impulse);
+		helicopter.AddForce(transform.up * throttle2 * stickThrottleRate, ForceMode.Impulse);
 		helicopter.AddTorque(transform.right * pitch2 * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll2 * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw2l * yawRate, ForceMode.Acceleration);
@@ -73,11 +74,20 @@ public class HelicopterController : MonoBehaviour
 		pitch = Input.GetAxis("Pitch");
 		yaw = Input.GetAxis("Yaw");
 
+		throttle2 = InputBridge.Instance.LeftThumbstickAxis.y;
 		roll2 = -InputBridge.Instance.RightThumbstickAxis.x;
 		pitch2 = InputBridge.Instance.RightThumbstickAxis.y;
 		yaw2r = InputBridge.Instance.RightTrigger;
-		yaw2l = -InputBridge.Instance.RightGrip;
-		throttle2 = InputBridge.Instance.LeftThumbstickAxis.y;
+		yaw2l = -InputBridge.Instance.LeftTrigger;
+
+
+		if (Input.GetKey(KeyCode.R))
+		{
+			helicopter.position = new Vector3(152, 3, 48);
+			helicopter.rotation = Quaternion.identity;
+			throttle = 0f;
+			throttle2 = 0f;
+		}
 
 		if (InputBridge.Instance.BButtonDown)
 		{
@@ -99,8 +109,9 @@ public class HelicopterController : MonoBehaviour
 		//Debug.Log(roll);
 		//Debug.Log(pitch);
 		//Debug.Log(yaw);
-		Debug.Log(throttle);
+		Debug.Log(throttle2);
 
 		throttle = Mathf.Clamp(throttle, 0f, 100f);
+		throttle2 = Mathf.Clamp(throttle2, 0f, 100f);
 	}
 }
