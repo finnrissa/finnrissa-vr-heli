@@ -112,7 +112,7 @@ public class HelicopterController : MonoBehaviour
 		//Debug.Log(yaw);
 		Debug.Log(throttle2);
 
-		throttle = Mathf.Clamp(throttle, 0f, 100f);
+		throttle = Mathf.Clamp(throttle, -100f, 100f);
 		throttle2 = Mathf.Clamp(throttle2, -100f, 100f);
 	}
 }
