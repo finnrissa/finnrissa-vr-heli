@@ -39,13 +39,13 @@ Material:
   - TVE_OVERLAY_MASK_SAMPLE_MAIN_UV
   - TVE_OVERLAY_PROJ
   - TVE_OVERLAY_SAMPLE_PLANAR_2D
-  - TVE_PIPELINE_STANDARD
+  - TVE_PERSPECTIVE
+  - TVE_PIPELINE_UNIVERSAL
   - TVE_PIVOT_OFF
   - TVE_SECOND_MASK
   - TVE_SECOND_MASK_SAMPLE_MAIN_UV
   - TVE_SECOND_SAMPLE_MAIN_UV
   - TVE_SECOND_VERT
-  - TVE_SIZEFADE
   - TVE_SUBSURFACE
   - TVE_THIRD_MASK
   - TVE_THIRD_MASK_SAMPLE_MAIN_UV
@@ -628,11 +628,11 @@ Material:
     - _OverlayVariation: 0
     - _OverlayVariationValue: 0
     - _Parallax: 0.02
-    - _PerspectiveAngleValue: 1
+    - _PerspectiveAngleValue: 3.13
     - _PerspectiveCat: 0
     - _PerspectiveCategory: 1
     - _PerspectiveEnd: 1
-    - _PerspectiveIntensityValue: 0
+    - _PerspectiveIntensityValue: 2.36
     - _PerspectiveNoiseValue: 0
     - _PerspectivePushValue: 0
     - _PivotsMessage: 0
@@ -691,12 +691,12 @@ Material:
     - _ShaderMode: 0
     - _SizeFadeCat: 0
     - _SizeFadeCategory: 1
-    - _SizeFadeDistMaxValue: 300
-    - _SizeFadeDistMinValue: 200
+    - _SizeFadeDistMaxValue: 1000
+    - _SizeFadeDistMinValue: 1000
     - _SizeFadeElementMode: 0
     - _SizeFadeEnd: 1
     - _SizeFadeEndValue: 300
-    - _SizeFadeIntensityValue: 1
+    - _SizeFadeIntensityValue: 0
     - _SizeFadeMessage: 0
     - _SizeFadeMode: 0
     - _SizeFadeScaleMode: 0
