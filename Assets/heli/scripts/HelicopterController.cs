@@ -34,26 +34,6 @@ public class HelicopterController : MonoBehaviour
 	private void Update()
 	{
 		InputCtrl();
-
-		//if (InputBridge.Instance.RightThumbstickAxis.x > 0)
-		//{
-			//Debug.Log("Stick POSITIVE X.");
-			//if (InputBridge.Instance.RightThumbstickAxis.x == 0)
-			//{
-				//Debug.Log("Stick X UNACTUATED");
-			//}
-		//}
-		//else Debug.Log("Stick NEGATIVE X");
-
-		//if (InputBridge.Instance.RightThumbstickAxis.y > 0)
-		//{
-			//Debug.Log("Stick POSITIVE Y");
-			//if (InputBridge.Instance.RightThumbstickAxis.y == 0)
-			//{
-				//Debug.Log("Stick Y UNACTUATED");
-			//}
-		//}
-		//else Debug.Log("Stick NEGATIVE Y.");
 	}
 
 	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.
@@ -84,7 +64,7 @@ public class HelicopterController : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.R))
 		{
-			helicopter.position = new Vector3(152, 3, 48);
+			helicopter.position = new Vector3(2027, 123, 1400);
 			helicopter.rotation = Quaternion.identity;
 			throttle = 0f;
 			throttle2 = 0f;
@@ -92,7 +72,7 @@ public class HelicopterController : MonoBehaviour
 
 		if (InputBridge.Instance.BButtonDown)
 		{
-			helicopter.position = new Vector3(152, 3, 48);
+			helicopter.position = new Vector3(2027, 123, 1400);
 			helicopter.rotation = Quaternion.identity;
 			throttle = 0f;
 			throttle2 = 0f;
