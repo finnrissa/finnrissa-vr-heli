@@ -462,7 +462,7 @@ Material:
     - _IsTarget40Shader: 1
     - _IsUniversalPipeline: 1
     - _IsVersion: 2000
-    - _LayerCategory: 0
+    - _LayerCategory: 1
     - _LayerColorsValue: 0
     - _LayerEnd: 1
     - _LayerExtrasValue: 0
@@ -599,7 +599,7 @@ Material:
     - _OcclusionMeshMode: 1
     - _OcclusionStrength: 1
     - _OverlayBakeMode: 0
-    - _OverlayCategory: 1
+    - _OverlayCategory: 0
     - _OverlayContrast: 0
     - _OverlayContrastValue: 4
     - _OverlayCoordMode: 0
@@ -819,7 +819,7 @@ Material:
     - _VertexRollingMode: 1
     - _VertexVariationMode: 0
     - _WetnessBakeMode: 0
-    - _WetnessCategory: 1
+    - _WetnessCategory: 0
     - _WetnessContrastValue: 0.25
     - _WetnessDropsDistValue: 20
     - _WetnessDropsIntensityValue: 0

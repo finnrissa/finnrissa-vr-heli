@@ -8,6 +8,8 @@ using BNG;
 public class HelicopterController : MonoBehaviour
 {
 	public Rigidbody helicopter;
+	[SerializeField] private float powerToWeightRatio;
+	[SerializeField] private float forceMultiplier;
 	[SerializeField] private float throttleSensitivity;
 	[SerializeField] private float yawRate;
 	[SerializeField] private float rollRate;
@@ -39,10 +41,12 @@ public class HelicopterController : MonoBehaviour
 	private void FixedUpdate() // forces acting on the helicopter. Force mode impulse since it is weight dependent. The rigidbody weighs 360kg.
 	{
 		helicopter.AddForce(transform.up * throttle, ForceMode.Impulse);
+		helicopter.AddForce(transform.up * (throttle2 * Mathf.Abs(throttle2)) * stickThrottleRate + (transform.up * throttleConstant), ForceMode.Impulse);
+		helicopter.AddForce(transform.right * pitch * forceMultiplier, ForceMode.Impulse);
+
 		helicopter.AddTorque(transform.right * pitch * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll * rollRate, ForceMode.Acceleration);
-		helicopter.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);
-		helicopter.AddForce(transform.up * (throttle2 * Mathf.Abs(throttle2)) * stickThrottleRate + (transform	.up* throttleConstant), ForceMode.Impulse);
+		helicopter.AddTorque(transform.up * yaw * yawRate, ForceMode.Acceleration);;
 		helicopter.AddTorque(transform.right * pitch2 * pitchRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.forward * roll2 * rollRate, ForceMode.Acceleration);
 		helicopter.AddTorque(transform.up * yaw2l * yawRate, ForceMode.Acceleration);
@@ -91,7 +95,6 @@ public class HelicopterController : MonoBehaviour
 		//Debug.Log(pitch);
 		//Debug.Log(yaw);
 		Debug.Log(throttle2);
-
 		throttle = Mathf.Clamp(throttle, -100f, 100f);
 		throttle2 = Mathf.Clamp(throttle2, -100f, 100f);
 	}
