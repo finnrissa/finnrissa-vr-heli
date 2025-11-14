@@ -86,7 +86,7 @@ public class HelicopterController : MonoBehaviour
 		if (InputBridge.Instance.BButtonDown)
 		{
 			helicopter.position = new Vector3(2027, 123, 1400);
-			helicopter.rotation = Quaternion.identity;
+			helicopter.rotation = Quaternion.Euler(0,0,0);
 			throttle = 0f;
 			throttle2 = 0f;
 		}
@@ -94,7 +94,7 @@ public class HelicopterController : MonoBehaviour
 		if (InputBridge.Instance.AButtonDown)
 		{
 			helicopter.position = new Vector3(898, 117, 2457);
-			helicopter.rotation = Quaternion.identity;
+			helicopter.rotation = Quaternion.Euler(0, 0, 0);
 			throttle = 0f;
 			throttle2 = 0f;
 		}
