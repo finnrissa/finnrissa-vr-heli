@@ -13,6 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
   - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   - _OCCLUSIONMAP
   - _PARALLAXMAP
   m_InvalidKeywords: []
@@ -30,6 +31,10 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: aaecbc88709a4a24c9fba5d98dff8d0b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d2516660fe5793f40b88607ea15b304e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -53,7 +58,9 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Metallic: 0
-    - _Smoothness: 0.523
+    - _OcclusionStrength: 0
+    - _Parallax: 0.005
+    - _Smoothness: 0.246
     - _Surface: 0
     - _ZWrite: 1
     m_Colors:

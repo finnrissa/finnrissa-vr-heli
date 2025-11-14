@@ -15,11 +15,11 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.0025
+  m_FogColor: {r: 0.5803922, g: 0.6313726, b: 0.67058825, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.048
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 1001.21
   m_AmbientSkyColor: {r: 0.3584906, g: 0.3401074, b: 0.27224994, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1529,8 +1529,7 @@ MonoBehaviour:
   customMaterial: {fileID: 0}
   terrainData: {fileID: 0}
   terrainMask: 10
-  debugData: <b><size=10><color=#ff7663>The element is outside the base distance
-    bounds</color></size></b>
+  debugData: <size=10><color=#e1f043>The element is inside the base distance bounds</color></size>
   materialData:
     shader: {fileID: 4800000, guid: b3820571eb3f04f4f855cc7161c165d7, type: 3}
     shaderName: 
@@ -1956,7 +1955,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 75.2036, y: 75.2036, z: 75.2036}
+  m_LocalScale: {x: 75.2036, y: 75.2036, z: 67.359116}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 409618201}
@@ -4781,7 +4780,7 @@ GameObject:
   - component: {fileID: 407405158}
   - component: {fileID: 407405161}
   - component: {fileID: 407405160}
-  - component: {fileID: 407405159}
+  - component: {fileID: 407405162}
   m_Layer: 0
   m_Name: rotors (1)
   m_TagString: Untagged
@@ -4804,28 +4803,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3285959572231616856}
   m_LocalEulerAnglesHint: {x: -0.038, y: 0.744, z: -90.003}
---- !u!64 &407405159
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407405157}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8467973019869391972, guid: 328e384d6a4e4e84d9e0156b32ab06b7, type: 3}
 --- !u!23 &407405160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4879,6 +4856,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407405157}
   m_Mesh: {fileID: 8467973019869391972, guid: 328e384d6a4e4e84d9e0156b32ab06b7, type: 3}
+--- !u!65 &407405162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407405157}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000007, y: 0.11, z: 0.09900444}
+  m_Center: {x: 0.000007633634, y: 0.10176209, z: 0.020769088}
 --- !u!1 &409618200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,6 +4890,7 @@ GameObject:
   - component: {fileID: 409618204}
   - component: {fileID: 409618203}
   - component: {fileID: 409618202}
+  - component: {fileID: 409618206}
   m_Layer: 0
   m_Name: StickSphere (1)
   m_TagString: Untagged
@@ -4909,7 +4908,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.50000006, y: 0.49999997, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 0.0985, y: 0.2583, z: 0.52028507}
-  m_LocalScale: {x: 0.015748342, y: 0.015748342, z: 0.015748342}
+  m_LocalScale: {x: 0.02103664, y: 0.02103664, z: 0.02103664}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 105894066}
@@ -5005,6 +5004,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409618200}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &409618206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409618200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf699b2a60b3f3449fd84074b98bebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPitchAngle: 300
+  maxRollAngle: 300
+  returnSpeed: 5
+  inputResponseSpeed: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7371,12 +7386,12 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: d263cd3b44d61d744a0ba6df3800ef9a, type: 2}
-  m_TreeDistance: 1117
+  m_TreeDistance: 891
   m_TreeBillboardDistance: 5
   m_TreeCrossFadeLength: 0
   m_TreeMaximumFullLODCount: 0
-  m_DetailObjectDistance: 88
-  m_DetailObjectDensity: 0.813
+  m_DetailObjectDistance: 30
+  m_DetailObjectDensity: 0.667
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 618
   m_HeightmapMinimumLODSimplification: 0
@@ -11003,6 +11018,7 @@ GameObject:
   - component: {fileID: 1088700051}
   - component: {fileID: 1088700050}
   - component: {fileID: 1088700054}
+  - component: {fileID: 1088700055}
   m_Layer: 0
   m_Name: StickSphere
   m_TagString: Untagged
@@ -11094,7 +11110,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.50000006, y: 0.49999997, z: 0.5, w: -0.5}
   m_LocalPosition: {x: -0.098154336, y: 0.25826496, z: 0.52028507}
-  m_LocalScale: {x: 0.015748342, y: 0.015748342, z: 0.015748342}
+  m_LocalScale: {x: 0.021036636, y: 0.021036636, z: 0.021036636}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5127251163687642856}
@@ -11114,6 +11130,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPitchAngle: 10
   maxRollAngle: 10
+  returnSpeed: 5
+  inputResponseSpeed: 10
+--- !u!114 &1088700055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088700049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf699b2a60b3f3449fd84074b98bebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPitchAngle: 20
+  maxRollAngle: 20
   returnSpeed: 5
   inputResponseSpeed: 10
 --- !u!1 &1098650299
@@ -12086,8 +12118,7 @@ MonoBehaviour:
   customMaterial: {fileID: 0}
   terrainData: {fileID: 0}
   terrainMask: 10
-  debugData: <b><size=10><color=#ff7663>The element is outside the base distance
-    bounds</color></size></b>
+  debugData: <size=10><color=#e1f043>The element is inside the base distance bounds</color></size>
   materialData:
     shader: {fileID: 4800000, guid: 853be43322d350648a82ec17b27de5cf, type: 3}
     shaderName: 
@@ -14525,7 +14556,7 @@ Transform:
   m_GameObject: {fileID: 1423491552}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08141012, y: -0, z: -0, w: 0.9966807}
-  m_LocalPosition: {x: 0.1, y: 0.211, z: -3.729}
+  m_LocalPosition: {x: 0.1, y: -0.41, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16734,12 +16765,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670529622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1000, y: 0, z: -1000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -288.98624, y: -33.05755, z: -675.35547}
+  m_LocalScale: {x: 0.28138873, y: 0.28138873, z: 0.28138873}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 543450651667387540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1674255458
 PrefabInstance:
@@ -17593,8 +17624,7 @@ MonoBehaviour:
   customMaterial: {fileID: 0}
   terrainData: {fileID: 0}
   terrainMask: 10
-  debugData: <b><size=10><color=#ff7663>The element is outside the base distance
-    bounds</color></size></b>
+  debugData: <size=10><color=#e1f043>The element is inside the base distance bounds</color></size>
   materialData:
     shader: {fileID: 4800000, guid: b3820571eb3f04f4f855cc7161c165d7, type: 3}
     shaderName: 
@@ -21304,8 +21334,8 @@ Transform:
   m_GameObject: {fileID: 919132147999477294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2027, y: 117.29, z: 1400.08}
-  m_LocalScale: {x: 3.1623085, y: 3.1623085, z: 3.1623085}
+  m_LocalPosition: {x: 2027, y: 117.48, z: 1400.08}
+  m_LocalScale: {x: 3.5538023, y: 3.5538023, z: 3.5538023}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1088700053}
@@ -21357,6 +21387,7 @@ Transform:
   - {fileID: 1636069197656044730}
   - {fileID: 908324225295976476}
   - {fileID: 2144466801381602839}
+  - {fileID: 1670529623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &589897759005611397
@@ -21544,9 +21575,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helicopter: {fileID: 919132147999477296}
   powerToWeightRatio: 350
-  forceMultiplier: 3
+  forceMultiplier: 300
   throttleSensitivity: 4
-  yawRate: 2.12
+  yawRate: 2
   rollRate: 1.88
   pitchRate: 2.2
   stickThrottleRate: 50
@@ -21561,8 +21592,8 @@ Rigidbody:
   m_GameObject: {fileID: 919132147999477294}
   serializedVersion: 4
   m_Mass: 350
-  m_Drag: 0.19
-  m_AngularDrag: 0.13
+  m_Drag: 0.3
+  m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -23940,7 +23971,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 75.2036, y: 75.2036, z: 75.2036}
+  m_LocalScale: {x: 75.2036, y: 75.2036, z: 67.7983}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1088700053}
@@ -25482,8 +25513,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8616184512721786614
-MeshCollider:
+--- !u!65 &8616184512721786614
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -25500,10 +25531,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8467973019869391972, guid: 328e384d6a4e4e84d9e0156b32ab06b7, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.11, z: 0.09900443}
+  m_Center: {x: -0.000015258789, y: 0.10176016, z: 0.020772899}
 --- !u!23 &8628502784764990948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25854,7 +25884,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 725644600}
   - {fileID: 1292497028}
-  - {fileID: 1670529623}
   - {fileID: 543450651667387540}
   - {fileID: 1625954770}
   - {fileID: 1512245108}
