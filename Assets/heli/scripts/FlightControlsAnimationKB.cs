@@ -19,12 +19,12 @@ public class FlightControlsAnimationKB : MonoBehaviour
 
 	void Update()
 	{
-		float rollInput2 = Input.GetAxis("Roll");
-		float pitchInput2 = Input.GetAxis("Pitch");
+		float pitchInput2 = Input.GetAxis("Roll");
+		float rollInput2 = Input.GetAxis("Pitch");
 		float yaw2 = Input.GetAxis("Yaw");
 
 		// Rotate around the local X axis — this is your working pitch
-		Quaternion pitchRotation = Quaternion.AngleAxis(-pitchInput2 * maxPitchAngle, Vector3.right);
+		Quaternion pitchRotation = Quaternion.AngleAxis(pitchInput2 * maxPitchAngle, Vector3.right);
 
 
 		// Rotate around the stick’s local forward axis (instead of world Z)

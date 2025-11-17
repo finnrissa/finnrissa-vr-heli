@@ -5,9 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/heli/scenes/menu.unity
+    guid: 2777a624b7ca00a48bacfcbdec00ff81
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial.unity
+    guid: 485c2753ee56f854faa4a5ff0a278985
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial 2.unity
+    guid: ed8b8ead4c932984ebb272e648a1452e
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial 3.unity
+    guid: 6da0815eaa92e7345a510a1a30dd602a
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial 4.unity
+    guid: 3502e6e0a4ace7e4fb2206de1f0775e2
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial 5.unity
+    guid: ffa1ae46a7d0d434f9f868031673ac1f
+  - enabled: 1
+    path: Assets/heli/scenes/tutorial 6.unity
+    guid: 524099dc45db3404baff805e4474ff4c
+  - enabled: 1
+    path: Assets/heli/scenes/finnrissa.unity
+    guid: 5851db6bb58075c488d65cc4f5116013
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: e39f4b35a6db18348b41eb0262520e69, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 93f3b39750563a34c84624b53a728f85, type: 2}
